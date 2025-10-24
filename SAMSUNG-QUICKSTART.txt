@@ -1,0 +1,114 @@
+═══════════════════════════════════════════════════════════════════════
+          📱 SAMSUNG PHONE → MAC - SUPER QUICK SETUP
+═══════════════════════════════════════════════════════════════════════
+
+🎯 FASTEST WAY (2 minutes):
+
+  1. On Samsung: Take photos of vintage item
+
+  2. On Samsung: Open Gmail/Email app
+     → Attach photos
+     → Send to yourself
+
+  3. On Mac: Open Gmail
+     → Download photos to Downloads folder
+
+  4. On Mac Terminal:
+     cd vintage-lister
+     ./start.sh
+     Choose option 1
+     Drag photos in and press Enter
+
+  ✅ DONE! See your AI-generated listing!
+
+═══════════════════════════════════════════════════════════════════════
+
+⚡ AUTOMATIC WAY (One-time 5 min setup, then auto forever):
+
+  Step 1: INSTALL GOOGLE DRIVE ON MAC
+
+    → Go to: https://www.google.com/drive/download/
+    → Download "Drive for desktop"
+    → Install and sign in with your Google account
+       (Same account as your Samsung phone)
+
+  Step 2: ENABLE BACKUP ON SAMSUNG
+
+    → Open Google Photos app on Samsung
+    → Tap your profile picture (top right)
+    → Tap "Turn on backup"
+    → Choose "High quality" (free unlimited!)
+
+  Step 3: FIND YOUR PHOTOS FOLDER ON MAC
+
+    Open Terminal and run:
+
+    ls ~/Library/CloudStorage/
+
+    Look for: GoogleDrive-youremail@gmail.com
+
+    Your photos will be at:
+    ~/Library/CloudStorage/GoogleDrive-youremail@gmail.com/My Drive/Google Photos
+
+  Step 4: UPDATE .env FILE
+
+    Edit vintage-lister/.env and change WATCH_FOLDER to:
+
+    WATCH_FOLDER=/Users/alburtalvarado/Library/CloudStorage/GoogleDrive-YOUREMAIL/My Drive/Google Photos
+
+    (Replace YOUREMAIL with your actual email folder name)
+
+  Step 5: START WATCHING
+
+    cd vintage-lister
+    npm run dev watch
+
+  NOW: Take photo on Samsung → It appears on Mac → Auto-analyzed! 🎉
+
+═══════════════════════════════════════════════════════════════════════
+
+🔌 USB CABLE WAY (If you have a cable handy):
+
+  1. Install Android File Transfer:
+     https://www.android.com/filetransfer/
+
+  2. Connect Samsung to Mac with USB cable
+
+  3. On Samsung: Swipe down notification
+     → Tap "USB options"
+     → Select "File Transfer"
+
+  4. Android File Transfer opens
+     → Go to DCIM/Camera
+     → Drag photos to Mac Desktop
+
+  5. Analyze them:
+     cd vintage-lister
+     npm run analyze -- ~/Desktop/*.jpg
+
+═══════════════════════════════════════════════════════════════════════
+
+💬 OTHER QUICK WAYS:
+
+  • WhatsApp: Send photos to yourself, download on Mac
+  • Telegram: Send to "Saved Messages", download on Mac
+  • Discord: DM yourself, download on Mac
+  • Dropbox: Upload from Samsung app, download on Mac
+
+  Then just run: ./start.sh and analyze!
+
+═══════════════════════════════════════════════════════════════════════
+
+🎯 MY RECOMMENDATION:
+
+  For testing NOW:
+    → Email yourself 2-3 photos (fastest!)
+
+  For long-term use:
+    → Set up Google Drive + Google Photos (automatic!)
+
+═══════════════════════════════════════════════════════════════════════
+
+📖 For more details: See ANDROID-SETUP.md
+
+═══════════════════════════════════════════════════════════════════════

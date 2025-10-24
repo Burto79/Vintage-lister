@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+
+# Test images
+test-images/
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.webp
+
+# Build output
+*.tsbuildinfo
+
+# Uploads directory
+uploads/
+
+# Frontend
+frontend/dist/
+frontend/node_modules/

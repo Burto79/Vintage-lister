@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod:*)",
+      "Bash(tree:*)",
+      "Bash(curl:*)",
+      "Bash(npm install:*)",
+      "Bash(lsof:*)",
+      "Bash(open:*)",
+      "Bash(ipconfig getifaddr:*)",
+      "Bash(xargs:*)",
+      "Bash(/usr/libexec/ApplicationFirewall/socketfilterfw:*)",
+      "Bash(cat:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

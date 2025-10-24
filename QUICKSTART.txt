@@ -1,0 +1,79 @@
+╔══════════════════════════════════════════════════════════════╗
+║               VINTAGE LISTER - QUICK START                   ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎯 WHAT YOU NEED:
+
+1. Anthropic API Key
+   → Get it: https://console.anthropic.com/
+   → Add to: .env file (replace "your_api_key_here")
+
+2. Vintage item photos
+   → Take with your phone
+   → Multiple angles work best
+
+
+🚀 HOW TO USE:
+
+   Option A - EASY MODE:
+
+   $ ./start.sh
+
+   (Then follow the menu)
+
+
+   Option B - DIRECT COMMANDS:
+
+   # Analyze specific photos:
+   $ npm run analyze -- photo1.jpg photo2.jpg
+
+   # Watch folder for new photos:
+   $ npm run dev watch --folder ./incoming-photos
+
+
+📱 PHONE SYNC:
+
+   Quick way: Just AirDrop photos to your Mac
+
+   Auto way: Set up iCloud/Google Photos sync
+            Update WATCH_FOLDER in .env
+
+
+🎨 TIPS FOR BEST RESULTS:
+
+   ✓ Take 3-5 photos per item
+   ✓ Show all angles + any tags/labels
+   ✓ Good lighting (natural light)
+   ✓ Show any flaws honestly
+   ✓ Clean, simple background
+
+
+📊 WHAT IT DOES:
+
+   1. Analyzes your photos with AI
+   2. Identifies era, style, condition
+   3. Generates SEO-optimized title
+   4. Writes detailed description
+   5. Suggests price range
+   6. Creates eBay draft listing
+
+
+💡 WORKFLOW:
+
+   1. Take photos → Drop in folder
+   2. AI analyzes → Review results
+   3. Adjust price/description if needed
+   4. Post to eBay/Depop/etc.
+
+
+🆘 NEED HELP?
+
+   See SETUP.md for detailed instructions
+   See README.md for full documentation
+
+
+═══════════════════════════════════════════════════════════════
+
+Ready? Add your API key to .env, then run: ./start.sh
+
+═══════════════════════════════════════════════════════════════
