@@ -271,13 +271,13 @@ Respond in JSON:
 
     const response = await this.client.messages.create(requestConfig);
 
-    // Extract reasoning from thinking blocks
-    let reasoning = '';
-    for (const block of response.content) {
-      if (block.type === 'thinking') {
-        reasoning += block.thinking + '\n\n';
-      }
-    }
+    // Extract reasoning from thinking blocks (commented out for SDK compatibility)
+    // let reasoning = '';
+    // for (const block of response.content) {
+    //   if (block.type === 'thinking') {
+    //     reasoning += block.thinking + '\n\n';
+    //   }
+    // }
 
     // Extract JSON from text content
     const textContent = response.content.find(c => c.type === 'text')?.text || '';
@@ -286,10 +286,10 @@ Respond in JSON:
     if (jsonMatch) {
       const analysis = JSON.parse(jsonMatch[0]);
 
-      // Add reasoning from thinking blocks
-      if (reasoning && !analysis.reasoning) {
-        analysis.reasoning = reasoning;
-      }
+      // Add reasoning from thinking blocks (commented out for SDK compatibility)
+      // if (reasoning && !analysis.reasoning) {
+      //   analysis.reasoning = reasoning;
+      // }
 
       return analysis;
     }

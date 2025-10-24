@@ -145,10 +145,10 @@ export class AutoLister {
       const response = await this.claude.messages.create({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 16000,
-        thinking: {
-          type: 'enabled',
-          budget_tokens: 10000,
-        },
+        // thinking: {
+        //   type: 'enabled',
+        //   budget_tokens: 10000,
+        // },
         messages: [{
           role: 'user',
           content: `Create an eBay listing for this vintage item.

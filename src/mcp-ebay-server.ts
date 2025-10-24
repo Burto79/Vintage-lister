@@ -194,19 +194,19 @@ class EbayMCPServer {
             return await this.createListing(args);
 
           case 'get_listing_status':
-            return await this.getListingStatus(args.itemId);
+            return await this.getListingStatus(args?.itemId as string);
 
           case 'update_listing_price':
-            return await this.updatePrice(args.itemId, args.newPrice);
+            return await this.updatePrice(args?.itemId as string, args?.newPrice as number);
 
           case 'end_listing':
-            return await this.endListing(args.itemId, args.reason);
+            return await this.endListing(args?.itemId as string, args?.reason as string);
 
           case 'get_my_listings':
-            return await this.getMyListings(args.includeEnded);
+            return await this.getMyListings(args?.includeEnded as boolean);
 
           case 'check_sold_items':
-            return await this.checkSoldItems(args.daysBack);
+            return await this.checkSoldItems(args?.daysBack as number);
 
           default:
             throw new Error(`Unknown tool: ${name}`);

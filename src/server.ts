@@ -120,7 +120,7 @@ app.post('/api/analyze', upload.array('images', 10), async (req: Request, res: R
 
     // ALWAYS post to website (your own inventory)
     try {
-      const websiteListing = await db.addListing(item, ebayResult ? {
+      const websiteListing = await db.addListing(item, (ebayResult && ebayResult.itemId && ebayResult.url) ? {
         itemId: ebayResult.itemId,
         url: ebayResult.url,
       } : undefined);
@@ -247,7 +247,7 @@ app.post('/api/shop/mark-sold/:id', async (req: Request, res: Response) => {
 });
 
 // Start server - listen on all network interfaces (0.0.0.0) for phone access
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(Number(PORT), '0.0.0.0', () => {
   console.log(`🚀 Backend server running on http://localhost:${PORT}`);
   console.log(`📱 On network: http://192.168.254.89:${PORT}`);
   console.log(`📸 Upload endpoint: http://localhost:${PORT}/api/analyze`);
