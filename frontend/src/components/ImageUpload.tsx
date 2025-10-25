@@ -61,7 +61,8 @@ export default function ImageUpload({ onAnalysisComplete, isAnalyzing, setIsAnal
       formData.append('extendedThinking', String(useExtendedThinking))
       formData.append('autoPostToEbay', String(autoPostToEbay))
 
-      const response = await axios.post('/api/analyze', formData, {
+      const apiUrl = import.meta.env.VITE_API_URL || '';
+      const response = await axios.post(`${apiUrl}/api/analyze`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
