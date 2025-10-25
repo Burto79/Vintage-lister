@@ -246,12 +246,12 @@ app.post('/api/shop/mark-sold/:id', async (req: Request, res: Response) => {
   }
 });
 
-// Start server - listen on all network interfaces (0.0.0.0) for phone access
-app.listen(Number(PORT), '0.0.0.0', () => {
-  console.log(`🚀 Backend server running on http://localhost:${PORT}`);
-  console.log(`📱 On network: http://192.168.254.89:${PORT}`);
-  console.log(`📸 Upload endpoint: http://localhost:${PORT}/api/analyze`);
-  console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
+// Start server - listen on all network interfaces
+const server = app.listen(Number(PORT), '0.0.0.0', () => {
+  console.log(`🚀 Backend server running on port ${PORT}`);
+  console.log(`📸 Upload endpoint: /api/analyze`);
+  console.log(`🏥 Health check: /api/health`);
+  console.log(`✅ Server is ready and listening`);
 });
 
 export default app;
